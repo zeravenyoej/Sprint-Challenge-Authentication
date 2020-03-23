@@ -1,6 +1,6 @@
 const User = require("./users-model")
 
-module.exports = function validateUser(){
+module.exports = function validateUsername(){
 
     return async (req, res, next) => {
         try {

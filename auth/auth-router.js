@@ -41,8 +41,9 @@ router.post('/login', validateUsername(), async (req, res, next) => {
     if(!isPasswordValid){
         res.status(400).json({ message: "Please enter a valid password" })
     } else {
+        console.log("you've made it to the else block")
         const token = generateToken(req.user)
-        res.cookie("authToken", token).json({ message: `Welcome ${username}` })
+        res.cookie("token", token).json({ message: `Welcome ${username}` })
     }
   } catch(err){
       next(err)
