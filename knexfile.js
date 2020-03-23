@@ -5,7 +5,7 @@ module.exports = {
     useNullAsDefault: true,
     migrations: {
       directory: './database/migrations',
-      tableName: 'dbmigrations',
+      // tableName: 'dbmigrations',
     },
     seeds: { directory: './database/seeds' },
   },
